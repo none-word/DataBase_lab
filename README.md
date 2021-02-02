@@ -1,6 +1,6 @@
 TEAM: 
-Grigorii Kostarev
-Vladimir Bliznyukov
-Alexey Rakov
-Amir Khuzin 
-Gleb Smetanin
+Grigorii Kostarev\n
+Vladimir Bliznyukov\n
+Alexey Rakov\n
+Amir Khuzin\n
+Gleb Smetanin\n
