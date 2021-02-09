@@ -1,4 +1,4 @@
-## TEAM:
+## TEAM for the first week:
 
 Grigorii Kostarev
 
