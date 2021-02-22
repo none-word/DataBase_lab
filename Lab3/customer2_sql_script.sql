@@ -1,0 +1,1 @@
+EXPLAIN ANALYZE SELECT * FROM customer2 WHERE customer2.age = 23;
