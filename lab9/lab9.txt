@@ -1,0 +1,6 @@
+db.Database.find({});
+db.Database.find({}, {_id: 0, restaurant_id: 1, name: 1, borough: 1, cuisine: 1});
+db.Database.find({borough: "Bronx"}).limit(5);
+db.Database.find({$or: [{cuisine: {$not: /American /}}, {cuisine: {$not: /Chinese/}}, {name: {$regex: "^Wil"}}]}, {_id: 0, restaurant_id: 1, name: 1, borough: 1, cuisine: 1});
+db.Database.find({name: {$regex: /mon/}}, {_id: 0, name: 1, borough: 1, longtitude: 1, attitude: 1, cuisine: 1});
+db.Database.find({$or: [{borough: 'Staten Island'}, {borough: 'Queens'}, {borough: 'Bronx'}, {borough: 'Brooklyn'}]}, {_id: 0, name: 1, borough: 1, longtitude: 1, attitude: 1, cuisine: 1});
