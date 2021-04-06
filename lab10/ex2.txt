@@ -1,1 +1,7 @@
+Read committed:
 
+Moving Bob Brown to another group is hidden for another transaction, so Bob has moved but only in the second terminal. The first transaction updates only Mike's account because the changes from different are hidden. And so the balance has been updated only for Mike.
+     
+Repeatable read:
+
+Uncommitted updates are hidden for another transaction, so the result is the same as for Read Committed.
