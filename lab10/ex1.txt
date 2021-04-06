@@ -1,1 +1,9 @@
+Read Committed
 
+1) The results in both terminals are different because there is no commit yet, but the Read Committed needs to have commit of one transaction to another transaction can see the changes.
+2) The second terminal is waiting until the first one commits. Because if the second transaction executes the query, anomalies will be due to the changes of the same cell.
+
+Repeatable Read
+
+1) Both table has different results because Repeatable Read has higher isolation level than Read commit. Also, after commit nothing changes, because with Repeatable Read one transaction does not affect another by updating the data by the first transaction.
+2) No errors and query just add 20 to the value, because the updates from the first terminal have not been committed.
