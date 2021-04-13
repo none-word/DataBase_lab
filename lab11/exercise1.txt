@@ -1,0 +1,22 @@
+1)  match (a: fighter)-[:beats]->(b) with a, b, count(b) as cnt 
+    where a.weight in ["155", "170", "185"] and cnt > 0 return distinct a, cnt;
+2)  match (a:fighter)-[:beats]->(b)-[:beats]->(a)
+    with a, b, count(a) as cnta, count(b) as cntb
+    where cnta = 1 and cntb = 1
+    return a;
+3)  match (a:fighter)-[:beats]-(b)-[:beats]-(c)
+    where a.name = "Michael Bisping" and c.name <> "Michael Bisping"
+    return c;
+    
+    match (a:fighter)-[:beats*2..]->(b)
+    where a.name = "Khabib Nurmagomedov"
+    return b;
+4)  match (a:fighter)
+    where not (a)-[:beats]->()
+    return a;
+    
+    match (a:fighter)
+    where not (a)<-[:beats]-()
+    return a;
+5)  match (a:fighter)
+    set a.record = 0;
